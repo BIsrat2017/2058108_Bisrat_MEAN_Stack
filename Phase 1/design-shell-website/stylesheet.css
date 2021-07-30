@@ -1,0 +1,59 @@
+h1{
+    background-color: gray;
+    color: white;
+}
+h2{
+    background-color: yellow;
+    color: lightgrey;
+}
+h3{
+    background-color: rgb(187, 196, 204);
+}
+h4{
+    background-color: mediumorchid;
+}
+h5{
+    background-color: mintcream;
+}
+h6{
+    background-color: rgb(135, 135, 172);
+    color: whitesmoke;
+}
+p{
+    background-color: teal;
+    color: whitesmoke;
+}
+.divtag{
+    background-color: rgb(141, 168, 87);
+    color: rgb(235, 233, 227);
+}
+.top{
+    border-style: solid;
+    border-color: blue;
+    padding: 50px;
+    text-align: center;
+    border-spacing: 10px;
+    background-color: rgb(221, 221, 243);
+    font-size: 50px;
+    color: white;
+    margin: 20px;
+    border-width: 10px;
+}
+.body{
+    border-style: solid;
+    border-color: blue;
+    padding: 10px;
+    margin: 10px;
+    border-width: 5px;
+}
+.bottom{
+    border-style: solid;
+    border-color: blue;
+    padding: 50px;
+    text-align: center;
+    background-color: rgb(214, 214, 240);
+    font-size: 50px;
+    color: white;
+    margin: 10px;
+    border-width: 10px;
+}
