@@ -1,0 +1,43 @@
+
+p{
+    background-color: gainsboro;
+    text-align: center;
+}
+.navbar{
+    text-align: left;
+}
+
+a:hover{
+    background-color: blue;
+    color: aliceblue;
+}
+
+ul{
+    background-color: lightgray;
+    /* margin-bottom: 10px; */
+    font-size: x-large;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+form{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.card{
+    display: inline-block;
+    align-items: flex-start;
+    margin: 5px;
+    height: 450px;
+    text-align: start;
+    
+}
+img{
+    width: 300px;
+    height: 400px;
+}
+
+.cards{
+    align-items: flex-start;
+    text-align: center;
+}
