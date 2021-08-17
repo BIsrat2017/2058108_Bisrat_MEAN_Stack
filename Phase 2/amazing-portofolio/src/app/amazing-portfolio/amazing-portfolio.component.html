@@ -1,0 +1,86 @@
+
+<div>  
+    <div *ngIf="loginPage">
+        <form #loginRef="ngForm" (ngSubmit)="checkUser(loginRef)">
+            <h2>Log In Page</h2>
+            <div class="form-row">
+            <label class="row-md-2">User Name </label>
+            <input type="text" name="user" ngModel required minlength="2"/><br/>
+            </div>
+
+            <div class="form-row">
+            <label class="row-md-2">Password </label>
+            <input type="password" name="pass" ngModel required/><br/>
+            </div>
+
+            <div class="row">
+                <div class="col-11">
+            <input type="submit" class="btn btn-success" value="Login" [disabled]="loginRef.invalid"/>
+            <input type="reset" class="btn btn-success" value="clear"/>
+            </div>
+            <div class="col-1">
+            <input type="button" class="btn btn-outline-success" value="Sign Up" (click)="switch()">
+             </div>
+            </div>
+        </form>
+    </div>
+
+    <div *ngIf="registerPage">
+        <form #regRef="ngForm" (ngSubmit)="registerUser(regRef)">
+            
+            <h2> Registration Page</h2>
+            <div class="form-row">
+            <label class="col-md-1">First Name </label>
+            <input type="text" class="form-contol" name="fname"/><br/>
+           </div>
+           <div class="form-row">
+            <label class="col-md-1">Last Name </label>
+            <input type="text" class="form-contol" name="lname"/><br/>
+            </div>
+
+            <div class="form-row">
+            <label class="col-md-1"> User Name </label>
+            <input type="text" name="user" ngModel required/><br/>
+            </div>
+
+            <div class="form-row">
+            <label class="col-md-1">Password </label>
+            <input type="password" name="pass" ngModel required/><br/>
+            </div>
+
+            <div class="row">
+            <div class="col-md-11">
+            <input type="submit" class="btn btn-success" value="submit" [disabled]="regRef.invalid"/>
+            <input type="reset" class="btn btn-success" value="reset"/>
+            </div>
+            <div class="col-md-1">
+            <input type="button" class="btn btn-outline-dark" value="Log In" (click)="switch()">
+            </div>  
+            </div>
+        </form>
+    </div>
+
+    <div *ngIf="portofolioPage">
+
+        <h2 style="text-align: center;">My Portofolio</h2>
+
+        <form #porRef="ngForm">
+        <h3>Welcome: {{usern}}</h3>
+            <div class="form-row">
+            <label class="col-md-1">Contact Name </label>
+            <input type="text" name="name" ngModel required> <br>
+            </div>
+            <div class="form-row">
+            <label class="col-md-1" >Phone Number </label>
+            <input type="text" name="phone" ngModel required> <br>
+            </div>
+
+            <input type="button" class="btn btn-success" value="Save" (click)="disTable(porRef)" [disabled]="porRef.invalid">
+        </form>
+        <table>
+            <tr><th>Name</th><th>Phone</th></tr>
+            <tr *ngFor="let contact of arr"><td>{{contact.name}}</td><td>{{contact.phone}}</td></tr>
+        </table>
+    </div>
+    
+</div>
