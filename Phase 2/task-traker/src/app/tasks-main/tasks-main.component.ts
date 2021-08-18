@@ -9,6 +9,8 @@ import { TaskInfo } from '../info.module';
 })
 export class TasksMainComponent implements OnInit {
   arr:Array<TaskInfo>=[];
+  dataSource:Array<TaskInfo>=[];
+  displayedColumns: string[] = ['ID', 'Name', 'Task', 'Date'];
   constructor() { }   // DI for Login Service
 
   ngOnInit(): void {
@@ -18,6 +20,7 @@ export class TasksMainComponent implements OnInit {
     let taskInfo=taskRef.value;
     let tempTask:TaskInfo={id:taskInfo.id,name:taskInfo.name,task:taskInfo.task,deadLine:taskInfo.date}
     this.arr.push(tempTask);
+    this.dataSource=this.arr;
   }
 
 }
