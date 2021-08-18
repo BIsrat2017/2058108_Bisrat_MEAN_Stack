@@ -10,6 +10,7 @@ import { MatFormFieldModule } from '@angular/material/form-field'
 import  { MatInputModule } from '@angular/material/input'
 import { FormsModule } from '@angular/forms';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatTableModule
   ],
 
   providers: [],

@@ -6,3 +6,10 @@
     display: inline-block;
     
 } */
+h1, h2{
+    background-color: blueviolet;
+}
+h1, h2:hover{
+    background-color: black;
+    color: whitesmoke;
+}
