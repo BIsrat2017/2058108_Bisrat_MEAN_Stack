@@ -9,18 +9,23 @@ import { TaskInfo } from '../info.module';
 })
 export class TasksMainComponent implements OnInit {
   arr:Array<TaskInfo>=[];
-  dataSource:Array<TaskInfo>=[];
-  displayedColumns: string[] = ['ID', 'Name', 'Task', 'Date'];
+  finaldate="";
+  
   constructor() { }   // DI for Login Service
 
   ngOnInit(): void {
   }
   msg?:string=""
   setTask(taskRef:NgForm){
-    let taskInfo=taskRef.value;
+    let taskInfo=taskRef.value;  
+
     let tempTask:TaskInfo={id:taskInfo.id,name:taskInfo.name,task:taskInfo.task,deadLine:taskInfo.date}
     this.arr.push(tempTask);
-    this.dataSource=this.arr;
   }
 
+  formatDate(dt:Date){
+    var dd = dt.getDate();
+    var mm = dt.getMonth()+1; 
+    var yyyy = dt.getFullYear()
+  }
 }
