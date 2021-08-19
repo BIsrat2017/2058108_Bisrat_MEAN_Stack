@@ -23,9 +23,4 @@ export class TasksMainComponent implements OnInit {
     this.arr.push(tempTask);
   }
 
-  formatDate(dt:Date){
-    var dd = dt.getDate();
-    var mm = dt.getMonth()+1; 
-    var yyyy = dt.getFullYear()
-  }
 }
