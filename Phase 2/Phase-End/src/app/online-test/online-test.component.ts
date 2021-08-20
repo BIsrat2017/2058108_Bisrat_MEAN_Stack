@@ -17,10 +17,10 @@ export class OnlineTestComponent implements OnInit {
   testSubmited:boolean=false;
 
   disable:boolean=true;
-
+  
   myForm:FormGroup;
 
-  selected:boolean=false;
+  selected:Array<boolean>=[];
 
   msg:string="";
 
@@ -56,8 +56,10 @@ export class OnlineTestComponent implements OnInit {
       if(this.arr[i].answer == this.myForm.value[this.arr[i].question]){
         this.correctCounter++;
         this.arr[i].answer="Correct Answer!!!";
+        this.selected.push(true);
       }else{
         this.arr[i].answer="Wrong Answer!!! ... The Correct Answer is "+ this.arr[i].answer;
+        this.selected.push(false);
       }
 
     }

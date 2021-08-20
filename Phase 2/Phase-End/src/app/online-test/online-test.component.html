@@ -29,9 +29,9 @@
             <li><input type="radio" name={{ee.question}} value={{ee.choice1}} disabled>{{ee.choice1}}</li> 
             <li><input type="radio" name={{ee.question}} value={{ee.choice2}} disabled >{{ee.choice2}}</li> 
             <li><input type="radio" name={{ee.question}} value={{ee.choice3}} disabled >{{ee.choice3}}</li> 
-            <li><input type="radio" name={{ee.question}} value={{ee.choice4}} disabled >{{ee.choice4}}</li> 
-           {{ee.answer}}          
+            <li><input type="radio" name={{ee.question}} value={{ee.choice4}} disabled >{{ee.choice4}}</li>               
      </ol>
+     <div [ngStyle]="{'color':selected[i]? 'green' : 'red'}">{{ee.answer}}</div>
       </div>
     </form>
   <div class="result">
