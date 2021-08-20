@@ -5,7 +5,6 @@
         "choice3":"Literally it does not mean anything.",
         "choice4":"Latin derivation that make up a text.",
         "answer":"Literally it does not mean anything."},
-
     {"question":"Why is Lorem Ipsum Dolor used?",
         "choice1":"To teach kids about life style.",
         "choice2":"The Lorem Ipsum text is used to fill spaces designated to host texts that have not yet been published.",
@@ -30,7 +29,8 @@
         "choice3":"officia deserunt mollitia animi, id est laborum et dolorum fuga.",
         "choice4":"Temporibus autem quibusdam et aut officiis debitis aut rerum",
         "answer":"Dal De finibus bonorum et malorum sections 1.10.32 and 1.10.33 - Marco Tullio Cicerone"},
-    {"question":"What musical artist sang, It's the Most Wonderful Time of the Year?","choice1":"41",
+    {"question":"What musical artist sang, It's the Most Wonderful Time of the Year?",
+        "choice1":"Arnod Termometer Schewashinger",
         "choice2":"Andy Williams",
         "choice3":"Jhon Karter",
         "choice4":"Berhane Tedla",
@@ -63,7 +63,7 @@
         "choice1":"10",
         "choice2":"15",
         "choice3":"20",
-        "choice4":"17",
+        "choice4":"None of the Above",
         "answer":"20"}
 
 ]
