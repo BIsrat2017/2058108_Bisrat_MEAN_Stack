@@ -21,6 +21,7 @@ export class OnlineTestComponent implements OnInit {
   myForm:FormGroup;
 
   selected:Array<boolean>=[];
+  passOrfail=false;
 
   msg:string="";
 
@@ -66,15 +67,16 @@ export class OnlineTestComponent implements OnInit {
     this.diplay=false;
     this.testSubmited=true;
     this.testActive=false;
-    this.disable=true;
   }
 
   percent():string{
 
     let res= (this.correctCounter/this.arr.length)*100;
     if(res>=70){
+      this.passOrfail=true;
       return res.toFixed(2) + " Pass!!"
     }else{
+      this.passOrfail=false;
       return res.toFixed(2) + " Fail!!!"
     }
   }

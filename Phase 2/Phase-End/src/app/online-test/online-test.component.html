@@ -10,9 +10,9 @@
              <div *ngFor="let ee of arr; let i=index">
                 {{i+1+")"}} {{ee.question}}
                 <ol style="list-style-type: lower-alpha;">
-                       <li><input type="radio" formControlName={{ee.question}} value={{ee.choice1}} [disabled]="diplay" >{{ee.choice1}}</li> 
-                       <li><input type="radio" formControlName={{ee.question}} value={{ee.choice2}} [disabled]="diplay"  >{{ee.choice2}}</li> 
-                       <li><input type="radio" formControlName={{ee.question}} value={{ee.choice3}} [disabled]="diplay" >{{ee.choice3}}</li> 
+                       <li><input type="radio" formControlName={{ee.question}} value={{ee.choice1}} [disabled]="disable" >{{ee.choice1}}</li> 
+                       <li><input type="radio" formControlName={{ee.question}} value={{ee.choice2}} [disabled]="disable"  >{{ee.choice2}}</li> 
+                       <li><input type="radio" formControlName={{ee.question}} value={{ee.choice3}} [disabled]="disable" >{{ee.choice3}}</li> 
                        <li><input type="radio" formControlName={{ee.question}} value={{ee.choice4}} [disabled]="disable" >{{ee.choice4}}</li>          
                 </ol> 
             </div>
@@ -35,8 +35,10 @@
       </div>
     </form>
   <div class="result">
-    <div style="margin-bottom: 10px;">Test Score : {{correctCounter}}/{{arr.length}}</div>
-    <div style="margin-bottom: 2%;">Test Percentage : {{percent()}}</div>
-  </div>
+    <div [ngStyle]="{'color':passOrfail? 'green' : 'red'}">
+      <div style="margin: 10px;">Test Score : {{correctCounter}}/{{arr.length}}</div>
+      <div style="margin-bottom: 2%;">Test Percentage : {{percent()}}</div>
+    </div>
+    </div>
   </div>
 </div>
