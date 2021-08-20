@@ -1,6 +1,7 @@
 <div>
     <div *ngIf="diplay">
-    <input type="button" value="Start Test" (click)="diplayTest()">
+    <button type="button" mat-raised-button color="primary"  (click)="diplayTest()">Start Test</button>
+    click here to start your test...
     </div>
 
 
@@ -15,7 +16,7 @@
                        <li><input type="radio" formControlName={{ee.question}} value={{ee.choice4}} [disabled]="disable" >{{ee.choice4}}</li>          
                 </ol> 
             </div>
-            <button mat-stroked-button color="warn" type="submit">Submit Test</button>
+            <button mat-raised-button color="warn" type="submit" style="margin: 2%;">Submit Test</button>
         </form>
     </div>
 
@@ -33,7 +34,9 @@
      </ol>
       </div>
     </form>
-    <div>Test Score : {{correctCounter}}/{{arr.length}}</div>
-    <div>Test Percentage : {{percent()}}</div>
+  <div class="result">
+    <div style="margin-bottom: 10px;">Test Score : {{correctCounter}}/{{arr.length}}</div>
+    <div style="margin-bottom: 2%;">Test Percentage : {{percent()}}</div>
+  </div>
   </div>
 </div>

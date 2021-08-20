@@ -1,0 +1,17 @@
+*{
+    margin-left: 2%; 
+}
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    background-color:blue;
+    color:white;
+    height: 50px;
+    text-align: center;
+    font-style: italic;
+}
+
+h1:hover{
+    background-color: black;
+    color: wheat;
+    font-style: italic;
+}
