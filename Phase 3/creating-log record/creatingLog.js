@@ -1,12 +1,14 @@
 let input=require("readline-sync")
-let fs=require("fs")
+let fs=require("fs");
+const { debug } = require("console");
 
 function addRecord(){
     let records=[];
     let fName=input.question("Whats is Your First Name: ")
     let lName=input.question("Whats is Your Last Name: ")
+    debug;
     let gender=input.question("Whats is Your Gender: ")
-    let email=input.question("Whats is Your email: ")
+    let email=input.questionEMail("Whats is Your email: ")
     let date=Date().toString()
 
     let detail = {fName:fName,lName:lName,gender:gender,email:email,date:date}
