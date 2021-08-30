@@ -1,32 +1,5 @@
 
 
-
-<h2>Add Task</h2>
-<a href="addTask">Add Task</a>
-
-<table>
-    <tr><th>Employee ID</th><th>Task ID</th><th>Task</th><th>Deadline</th></tr>
-    <tr><td></td><td></td><td></td><td></td></tr>
-</table>
-
-
-
-<style>
-    h2{
-        color: #F5DF4D;
-        background-color: #959A9C;
-        font-style: italic;
-        text-align: center;
-    }
-    h2:hover{
-        color: wheat;
-        background-color: black;
-        font-style: italic;
-    }
-</style>
-
-
-let totalData =`
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,14 +7,13 @@ let totalData =`
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h2 style="color: red;">This is sample for trieal</h2>
      <table border=1 style="width: 50%;">
         <tr><th>Employee ID</th><th>Task ID</th><th>Task</th><th>Deadline</th></tr>`;
-        for (let i = 0; i < allTasks.length; i++) {
-            totalData+= `<tr><td>`+allTasks[i].empid+`</td><td>`+allTasks[i].taskid+`</td><td>`+allTasks[i].task+`</td><td>`+allTasks[i].deadline+`</td></tr>`;
-            
-        }
-        totalData+=`</table>;
+    </table>
+    <a href="#" type="button">click here</a>
 </body>
 </html>`
