@@ -46,10 +46,11 @@ socket.on("connection",(io)=>{
     io.on("obj3",(msg)=>{
         console.log("Client :"+msg);
     })
+    
     var rand=getRandomInt(6);
     io.emit("obj1",timeString+", "+arr[rand])
 
-    console.log("Server :"+arr[rand]);
+   console.log("Server :"+arr[rand]);
     
 })
 

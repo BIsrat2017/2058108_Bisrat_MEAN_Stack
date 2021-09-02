@@ -9,10 +9,15 @@
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <style>
-        .creat{
-            border: rgb(22, 20, 20) solid;
-            height: 200px;
-            width: 100%;
+        h2{
+            color: #ffff00;
+            background-color:grey;
+            font-style: italic;
+            text-align: center;
+        }
+        .clie, .serv{
+            color: grey;
+            text-decoration: underline red;
         }
     </style>
 
@@ -20,7 +25,7 @@
           
         sendMsg = ()=>{
             var msgSent=document.getElementById("msg").value;
-            document.getElementById("disp").innerHTML+="<p> Client Message :"+msgSent+"</p>";
+            var text = document.getElementById("disp").insertAdjacentHTML('beforeend',msgSent+"\n");
           
             var socket = io();
 
@@ -32,12 +37,13 @@
             socket.emit("obj3",reciv)
 
             socket.on("obj1",(msg)=>{
-                var myTag = document.createElement("p");
-                console.log(msg);
-                var myTagC = document.createTextNode("Server Message: "+msg);
-                //myTag.setAttribute("style","color:red;"); 
-                myTag.appendChild(myTagC);
-                document.getElementById("rec").append(myTag);
+                // var myTag = document.createElement("p");
+                // console.log(msg);
+                // var myTagC = document.createTextNode("Server Message: "+msg);
+                // //myTag.setAttribute("style","color:red;"); 
+                // myTag.appendChild(myTagC);
+                // document.getElementById("rec").append(myTag);
+                var text = document.getElementById("rec").insertAdjacentHTML('beforeend',msg+"\n");
 
             })
         }
@@ -48,14 +54,14 @@
 <body>
     <h2>This is Index page</h2>
     Name  :<input type="text" id="name">
-    <div class="creatBox">
-        <div id="disp"></div>
-    </div>
-    <!-- <textarea id="disp" cols="90" rows="2">
-    </textarea><br> -->
-    <!-- <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0" >
-        <p id="disp"></p>
-    </div> -->
+    
+    
+    <div class="form-group">
+        <label for="disp" class="clie">Client Message</label>
+        <textarea class="form-control" id="disp" rows="3" disabled></textarea>
+        <!-- <input type="button" value="hit me" onclick="runit()"> -->
+      </div>
+    
     <form>
     <!-- Message:<input type="text" id="msg"><br> -->
     Message:<textarea id="msg" cols="90" rows="2"></textarea><br>
@@ -63,10 +69,14 @@
     </form>
 
     
-    <div class="creat">
+    <!-- <div class="creat">
         <div id="rec"></div>
-    </div>
-    
+    </div> -->
+    <div class="form-group">
+        <label for="rec" class="serv">Server Message</label>
+        <textarea class="form-control" id="rec" rows="3" disabled></textarea>
+        <!-- <input type="button" value="hit me" onclick="runit()"> -->
+      </div>
 
 </body>
 </html>
