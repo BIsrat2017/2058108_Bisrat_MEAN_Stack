@@ -12,9 +12,7 @@ app.get("/",(req,res)=>{
     res.sendFile(__dirname+"/index.html")
 })
 
-// function getRandomInt(max) {
-//     return Math.floor(Math.random() * max);
-//   }
+
 
 
 socket.on("connection",(io)=>{
